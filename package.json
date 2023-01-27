@@ -1,0 +1,45 @@
+{
+  "name": "lang-firestore",
+  "version": "0.0.2",
+  "description": "Firestore query language basic support for the CodeMirror code editor",
+  "repository": "https://github.com/omar-dulaimi/lang-firestore",
+  "scripts": {
+    "build": "rollup -c",
+    "release": "npm publish"
+  },
+  "author": {
+    "name": "Omar Dulaimi",
+    "url": "https://github.com/omar-dulaimi"
+  },
+  "keywords": [
+    "codemirror",
+    "firestore",
+    "lang-firestore"
+  ],
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "dependencies": {
+    "@codemirror/autocomplete": "^6.4.0",
+    "@codemirror/language": "^6.0.0",
+    "@lezer/highlight": "^1.0.0"
+  },
+  "devDependencies": {
+    "@lezer/generator": "^1.0.0",
+    "rollup": "^2.60.2",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-ts": "^3.0.2",
+    "typescript": "^4.3.4"
+  },
+  "bugs": {
+    "url": "https://github.com/omar-dulaimi/lang-firestore/issues"
+  },
+  "homepage": "https://github.com/omar-dulaimi/lang-firestore#readme",
+  "license": "MIT"
+}
