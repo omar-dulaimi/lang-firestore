@@ -1,5 +1,5 @@
 import { lezer } from "@lezer/generator/rollup";
-import typescript from "rollup-plugin-ts";
+import typescript from "@rollup/plugin-typescript";
 
 export default {
   input: "src/index.ts",
@@ -8,5 +8,5 @@ export default {
     { file: "dist/index.cjs", format: "cjs" },
     { dir: "./dist", format: "es" },
   ],
-  plugins: [lezer(), typescript()],
+  plugins: [lezer(), typescript({ tsconfig: "./tsconfig.json" })],
 };

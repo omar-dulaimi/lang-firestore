@@ -1,11 +1,15 @@
 {
   "name": "lang-firestore",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Firestore query language basic support for the CodeMirror code editor",
   "repository": "https://github.com/omar-dulaimi/lang-firestore",
   "scripts": {
-    "build": "rollup -c",
-    "release": "npm publish"
+  "build": "rollup -c",
+  "test": "vitest run",
+  "test:watch": "vitest",
+  "typecheck": "tsc -p tsconfig.json --noEmit",
+  "prepublishOnly": "npm run typecheck && npm run test && npm run build",
+  "release": "npm publish"
   },
   "author": {
     "name": "Omar Dulaimi",
@@ -25,17 +29,25 @@
   },
   "types": "dist/index.d.ts",
   "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "funding": "https://github.com/sponsors/omar-dulaimi",
   "dependencies": {
-    "@codemirror/autocomplete": "^6.4.0",
-    "@codemirror/language": "^6.0.0",
-    "@lezer/highlight": "^1.0.0"
+  "@codemirror/autocomplete": "^6.18.6",
+  "@codemirror/language": "^6.11.3",
+  "@lezer/highlight": "^1.2.1"
   },
   "devDependencies": {
-    "@lezer/generator": "^1.0.0",
-    "rollup": "^2.60.2",
-    "rollup-plugin-dts": "^4.0.1",
-    "rollup-plugin-ts": "^3.0.2",
-    "typescript": "^4.3.4"
+  "@lezer/generator": "^1.8.0",
+  "@rollup/plugin-typescript": "^12.1.4",
+  "rollup": "^4.47.1",
+  "rollup-plugin-dts": "^6.2.3",
+  "typescript": "^5.9.2",
+  "vitest": "^3.2.4"
   },
   "bugs": {
     "url": "https://github.com/omar-dulaimi/lang-firestore/issues"
