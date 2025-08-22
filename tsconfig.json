@@ -6,7 +6,10 @@
     "newLine": "lf",
     "declaration": true,
   "moduleResolution": "node",
-  "outDir": "dist"
+  "outDir": "dist",
+  "lib": ["ES2020", "DOM"],
+  "types": [],
+  "skipLibCheck": true
   },
   "include": ["src/*.ts"]
 }
